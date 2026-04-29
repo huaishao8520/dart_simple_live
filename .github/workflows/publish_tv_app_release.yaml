@@ -1,19 +1,19 @@
-name: app-build-action
+name: app-build-actionapp-build-actionapp-build-actionapp-build-actionapp-build-actionapp-build-actionapp-build-actionapp-build-action
 on:
   workflow_dispatch:  # 允许手动运行
 
 jobs:
   build-tv:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latestubuntu-latestubuntu-latestubuntu-latestubuntu-latestubuntu-latestubuntu-latestubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4actions/checkout@v4actions/checkout@v4actions/checkout@v4actions/checkout@v4actions/checkout@v4actions/checkout@v4actions/checkout@v4actions/checkout@v4actions/checkout@v4actions/checkout@v4actions/checkout@v4actions/checkout@v4actions/checkout@v4actions/checkout@v4actions/checkout@v4
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      - uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2subosito/flutter-action@v2
         with:
           flutter-version: "3.38.x"
 
@@ -23,9 +23,9 @@ jobs:
 
       - run: |
           cd simple_live_tv_app
-          flutter build apk --debug
+          flutter build apk --debug --no-shrink
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4actions/upload-artifact@v4
         with:
-          name: tv-apk
-          path: simple_live_tv_app/build/app/outputs/flutter-apk/app-debug.apk
+          name: tv-apktv-apktv-apktv-apktv-apktv-apktv-apktv-apk
+          path: simple_live_tv_app/build/app/outputs/flutter-apk/app-debug.apksimple_live_tv_app/build/app/outputs/flutter-apk/app-debug.apksimple_live_tv_app/build/app/outputs/flutter-apk/app-debug.apksimple_live_tv_app/build/app/outputs/flutter-apk/app-debug.apksimple_live_tv_app/build/app/outputs/flutter-apk/app-debug.apksimple_live_tv_app/build/app/outputs/flutter-apk/app-debug.apksimple_live_tv_app/build/app/outputs/flutter-apk/app-debug.apksimple_live_tv_app/build/app/outputs/flutter-apk/app-debug.apk
